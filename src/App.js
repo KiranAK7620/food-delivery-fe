@@ -1,7 +1,12 @@
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import HomePage from "./customer/pages/HomePage/HomePage";
+import { darkTheme } from "./theme/DarkTheme";
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <HomePage />
+    </ThemeProvider>
+  );
 }
